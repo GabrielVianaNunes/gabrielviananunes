@@ -9,6 +9,10 @@
     <meta name="description"
         content="Software Engineering undergrad. Java, Spring Boot & Angular projects, skills, and contact." />
 
+    <!-- Theme colors for light/dark -->
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0b0f19" media="(prefers-color-scheme: dark)">
+
     <!-- Tipografia -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
@@ -16,13 +20,17 @@
     <!-- Estilos -->
     <link rel="stylesheet" href="assets/css/styles.css" />
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
     <!-- Favicon e OG -->
     <link rel="icon" href="assets/img/favicon.png" />
     <meta property="og:title" content="Gabriel Nunes — Portfolio" />
-    <meta property="og:description" content="Software Engineering undergrad. Java, Spring Boot & Angular projects, skills, and contact." />
+    <meta property="og:description"
+        content="Software Engineering undergrad. Java, Spring Boot & Angular projects, skills, and contact." />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="assets/img/og-image.png" />
-    <meta property="og:url" content="https://SEU-USUARIO.github.io/" />
+    <link rel="canonical" href="https://gabrielnunes.github.io/">
+    <meta property="og:url" content="https://gabrielnunes.github.io/">
 </head>
 
 <body>
@@ -52,7 +60,7 @@
                 <div class="cta">
                     <a class="btn primary" href="#projetos">See projects</a>
                     <a class="btn outline" href="https://github.com/SEU-USUARIO" target="_blank"
-                        rel="noopener">GitHub</a>
+                        rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
         </section>
@@ -62,14 +70,35 @@
                 <div>
                     <h2>About me</h2>
                     <p>
-                        I’m a software engineering undergrad focused on Java (Spring Boot) back-end and
-                        Angular/TypeScript front-end.
-                        I enjoy designing clear APIs, responsive interfaces, and fast user experiences.
+                        I am a Software Engineering student with hands-on experience in full-stack development,
+                        combining
+                        backend and frontend technologies to deliver scalable and user-focused applications. My
+                        expertise
+                        includes Java (Spring Boot), Angular 17 with TypeScript, and Node.js, along with relational
+                        databases
+                        like PostgreSQL and H2.
+                    </p>
+                    <p>
+                        I have built real-world projects involving clean RESTful APIs, component-driven frontends with
+                        PrimeNG,
+                        and advanced reactive form validations. I also apply software design patterns (Factory,
+                        Decorator,
+                        Observer, Template Method) and advanced version control with Git and GitHub.
+                    </p>
+                    <p>
+                        Passionate about data-driven development and future applications of AI and machine learning, I
+                        also use
+                        Power BI for insights and business performance visualization. I am fluent in English, advanced
+                        in Spanish,
+                        and conversational in German (A2).
                     </p>
                     <ul class="highlights" role="list">
-                        <li>Spring Boot, Angular 17, TypeScript</li>
-                        <li>PostgreSQL, JPA/Hibernate</li>
-                        <li>Git, basic CI/CD, clean code</li>
+                        <li>Java & Spring Boot</li>
+                        <li>Angular 17 & TypeScript</li>
+                        <li>PostgreSQL & H2</li>
+                        <li>Software Design Patterns</li>
+                        <li>Power BI & Data Visualization</li>
+                        <li>English (Fluent), Spanish (Advanced), German (A2)</li>
                     </ul>
                 </div>
                 <figure class="portrait">
@@ -80,13 +109,34 @@
 
         <section id="habilidades" class="section">
             <div class="container">
-                <h2>Skills</h2>
-                <ul class="skills" role="list">
-                    <li><span>Java</span><meter value="0.9" min="0" max="1">90%</meter></li>
-                    <li><span>Spring Boot</span><meter value="0.85" min="0" max="1">85%</meter></li>
-                    <li><span>Angular</span><meter value="0.8" min="0" max="1">80%</meter></li>
-                    <li><span>TypeScript</span><meter value="0.8" min="0" max="1">80%</meter></li>
-                    <li><span>PostgreSQL</span><meter value="0.75" min="0" max="1">75%</meter></li>
+                <h2>Hard Skills</h2>
+                <ul class="skills-icons" role="list">
+                    <li><i class="devicon-java-plain colored"></i> Java</li>
+                    <li><i class="devicon-python-plain colored"></i> Python</li>
+                    <li><i class="devicon-nodejs-plain colored"></i> Node.js</li>
+                    <li><i class="devicon-angular-plain colored"></i> Angular / Angular CLI</li>
+                    <li><i class="devicon-typescript-plain colored"></i> TypeScript</li>
+                    <li><i class="devicon-html5-plain colored"></i> HTML5</li>
+                    <li><i class="devicon-css3-plain colored"></i> CSS3</li>
+                    <li><i class="devicon-spring-plain colored"></i> Spring Boot</li>
+                    <li><i class="devicon-postgresql-plain colored"></i> PostgreSQL / SQL Databases</li>
+                    <li><i class="devicon-amazonwebservices-plain-wordmark colored"></i> AWS Cloud Foundations</li>
+                    <li><i class="devicon-git-plain colored"></i> Git & GitHub</li>
+                    <li>Metrology & Optical Metrology</li>
+                    <li>Data Structures & Algorithms</li>
+                </ul>
+
+                <h2 style="margin-top:3rem;">Soft Skills</h2>
+                <ul class="skills-soft" role="list">
+                    <li>Written Communication</li>
+                    <li>Critical Thinking</li>
+                    <li>Problem Solving</li>
+                    <li>Oral Communication & Presentation</li>
+                    <li>Adaptability</li>
+                    <li>Agile Methodologies</li>
+                    <li>Team Collaboration</li>
+                    <li>Languages: Portuguese (Native), English (Fluent), Spanish (Advanced), German (Intermediate - A2)
+                    </li>
                 </ul>
             </div>
         </section>
@@ -98,7 +148,8 @@
                 <div class="cards">
                     <article class="card">
                         <h3>
-                            <a href="https://github.com/SEU-USUARIO/biblioteca-jpa" target="_blank" rel="noopener">
+                            <a href="https://github.com/SEU-USUARIO/biblioteca-jpa" target="_blank"
+                                rel="noopener noreferrer">
                                 Library System
                             </a>
                         </h3>
@@ -112,7 +163,8 @@
 
                     <article class="card">
                         <h3>
-                            <a href="https://github.com/SEU-USUARIO/agenda-angular" target="_blank" rel="noopener">
+                            <a href="https://github.com/SEU-USUARIO/agenda-angular" target="_blank"
+                                rel="noopener noreferrer">
                                 Contacts Agenda
                             </a>
                         </h3>
@@ -126,7 +178,8 @@
 
                     <article class="card">
                         <h3>
-                            <a href="https://github.com/SEU-USUARIO/vehiclerental_api" target="_blank" rel="noopener">
+                            <a href="https://github.com/SEU-USUARIO/vehiclerental_api" target="_blank"
+                                rel="noopener noreferrer">
                                 Vehicle Rental
                             </a>
                         </h3>
@@ -147,7 +200,8 @@
                 <p>Open to opportunities and collaborations. Let’s talk.</p>
                 <ul class="contact" role="list">
                     <li><a href="mailto:seu.email@exemplo.com">seu.email@exemplo.com</a></li>
-                    <li><a href="https://www.linkedin.com/in/SEU-USUARIO" target="_blank" rel="noopener">LinkedIn</a>
+                    <li><a href="https://www.linkedin.com/in/SEU-USUARIO" target="_blank"
+                            rel="noopener noreferrer">LinkedIn</a>
                     </li>
                 </ul>
             </div>
