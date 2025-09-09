@@ -251,6 +251,43 @@ a:hover {
     gap: .5rem;
 }
 
+/* Ícones custom (SVG) para skills sem Devicon */
+.skill-svg {
+  width: 2rem;
+  height: 2rem;
+  margin-right: .5rem;
+  flex-shrink: 0;
+  stroke: var(--primary);
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vertical-align: middle;
+}
+
+/* Hover glow para TODOS os ícones (Devicon <i> e SVGs custom) */
+.skills-icons li {
+  transition: transform .15s ease;
+}
+.skills-icons i,
+.skills-icons .skill-svg {
+  transition: filter .2s ease, text-shadow .2s ease;
+}
+
+/* Efeito no hover */
+.skills-icons li:hover { transform: translateY(-1px); }
+
+/* Devicon (font/SVG) */
+.skills-icons li:hover i {
+  text-shadow: 0 0 6px var(--ring);
+  filter: drop-shadow(0 0 4px var(--ring));
+}
+
+/* SVGs custom (Metrology, DSA) */
+.skills-icons li:hover .skill-svg {
+  filter: drop-shadow(0 0 4px var(--ring));
+}
+
 /* ========== Projetos ========== */
 .cards {
     display: grid;
@@ -321,10 +358,6 @@ a:hover {
     .menu {
         gap: .25rem;
     }
-
-    .skills {
-        grid-template-columns: 1fr;
-    }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -336,16 +369,27 @@ a:hover {
 }
 
 :root {
-    --accent: #2563eb;
+    --bg: #ffffff;
+    --text: #111827;
+    --muted: #6b7280;
+    --surface: #f3f4f6;
+    --border: #e5e7eb;
+    --primary: #2563eb;
+    --ring: #93c5fd;
+    --accent: var(--primary);   /* <- usa a primária no light */
 }
 
-/* azul claro (light) */
 @media (prefers-color-scheme: dark) {
     :root {
-        --accent: #2563eb;
+        --bg: #0b0f19;
+        --text: #e5e7eb;
+        --muted: #9ca3af;
+        --surface: #111827;
+        --border: #1f2937;
+        --primary: #60a5fa;
+        --ring: #1d4ed8;
+        --accent: var(--primary); /* <- acompanha a primária no dark */
     }
-
-    /* azul para dark */
 }
 
 /* ----- Languages block ----- */
