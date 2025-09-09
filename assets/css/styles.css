@@ -97,12 +97,13 @@ a:hover {
 }
 
 .menu a:focus-visible {
-  outline: 2px solid var(--ring);
-  outline-offset: 2px;
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
 }
+
 .menu a[aria-current="page"] {
-  background: var(--surface);
-  font-weight: 700;
+    background: var(--surface);
+    font-weight: 700;
 }
 
 /* Acessibilidade: pular para conteúdo */
@@ -167,9 +168,17 @@ a:hover {
     outline-offset: 2px;
 }
 
-.btn:hover { filter: brightness(1.05); }
-.btn.outline:hover { background: var(--surface); }
-.btn:active { transform: translateY(1px); }
+.btn:hover {
+    filter: brightness(1.05);
+}
+
+.btn.outline:hover {
+    background: var(--surface);
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
 
 /* ========== Seções ========== */
 .section {
@@ -210,35 +219,36 @@ a:hover {
 
 /* ========== Habilidades ========== */
 .skills-icons {
-  list-style: none;
-  display: grid;
-  gap: 1rem;
-  padding: 0;
-  margin: 2rem 0;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    list-style: none;
+    display: grid;
+    gap: 1rem;
+    padding: 0;
+    margin: 2rem 0;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
 }
 
 .skills-icons li {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 1.1rem;
-  font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
 }
 
 .skills-icons i {
-  font-size: 2rem;
-  line-height: 1;         /* evita “pulo” vertical */
-  vertical-align: middle;
+    font-size: 2rem;
+    line-height: 1;
+    /* evita “pulo” vertical */
+    vertical-align: middle;
 }
 
 .skills-soft {
-  list-style: disc;
-  padding-left: 1.5rem;
-  margin: 1.5rem 0;
-  color: var(--text);
-  display: grid;
-  gap: .5rem;
+    list-style: disc;
+    padding-left: 1.5rem;
+    margin: 1.5rem 0;
+    color: var(--text);
+    display: grid;
+    gap: .5rem;
 }
 
 /* ========== Projetos ========== */
@@ -276,10 +286,11 @@ a:hover {
 }
 
 @media (prefers-color-scheme: dark) {
-  .tags li {
-    background: #0b0f19;
-    border-color: #2a3344; /* borda um pouco mais evidente */
-  }
+    .tags li {
+        background: #0b0f19;
+        border-color: #2a3344;
+        /* borda um pouco mais evidente */
+    }
 }
 
 /* ========== Contato / Rodapé ========== */
@@ -317,5 +328,92 @@ a:hover {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  * { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
+    * {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+    }
+}
+
+:root {
+    --accent: #2563eb;
+}
+
+/* azul claro (light) */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --accent: #2563eb;
+    }
+
+    /* azul para dark */
+}
+
+/* ----- Languages block ----- */
+.with-accent {
+    position: relative;
+    padding-left: .85rem;
+    margin-bottom: 1rem;
+}
+
+.with-accent::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: .2rem;
+    bottom: .2rem;
+    width: .35rem;
+    background: var(--ring);
+    border-radius: .35rem;
+    filter: drop-shadow(0 0 6px var(--ring));
+}
+
+.lang-container {
+    position: relative;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    padding: 1rem 1.25rem;
+}
+
+.lang-container::before {
+    content: "";
+    position: absolute;
+    left: -2px;
+    top: .75rem;
+    bottom: .75rem;
+    width: 4px;
+    background: var(--accent);
+    border-radius: 999px;
+    filter: drop-shadow(0 0 8px var(--accent));
+}
+
+.lang-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.25rem 2rem;
+    align-items: center;
+}
+
+.lang-card {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+}
+
+.lang-card .fi {
+    font-size: 1.4rem;
+    /* tamanho da bandeira */
+    line-height: 1;
+    border-radius: .25rem;
+    box-shadow: 0 0 0 1px var(--border) inset;
+}
+
+.lang-name {
+    font-weight: 800;
+}
+
+.lang-level {
+    color: var(--muted);
+    font-size: .95rem;
+    margin-top: .15rem;
 }
